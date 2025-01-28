@@ -18,6 +18,7 @@ from django.contrib import admin
 from django.urls import path
 from task2.views import func_template, class_template
 from task3.views import main, market, buy_menu
+from task4 import views as v4
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -26,4 +27,8 @@ urlpatterns = [
     path('', main),
     path('market/', market),
     path('bm/', buy_menu),
+
+    path('platform/', v4.main),
+    path('platform/games/', v4.market),
+    path('platform/cart/', v4.buy_menu)
 ]

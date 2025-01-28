@@ -6,9 +6,9 @@ def main(request):
     return render(request, "third_task/main.html")
 def market(request):
     context = {
-        'games': ['Atomic Heart',
-                   'Cyberpank 2077',
-                   'PayDay 2']}
+        'first': "Atomic Heart",
+        'second': "Cyberpunk 2077",
+        'third' : 'PayDay 2'}
     return render(request, "third_task/market.html", context)
 def buy_menu(request):
     return render(request, "third_task/buy_menu.html")
